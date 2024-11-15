@@ -19,7 +19,7 @@ echo "<h1>Deployed via Terraform</h1>" | sudo tee /var/www/html/index.html
 EOF
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "e6efa78e5be5ec2d778ba728e273b3170fdb73cd"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-11-15 08:56:33"
     git_last_modified_by = "80401876+dguillencamara@users.noreply.github.com"
@@ -38,7 +38,7 @@ resource "aws_ebs_volume" "web_host_storage" {
   size = 1
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -56,7 +56,7 @@ resource "aws_ebs_snapshot" "example_snapshot" {
   description = "${local.resource_prefix.value}-ebs-snapshot"
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -104,7 +104,7 @@ resource "aws_security_group" "web-node" {
   depends_on = [aws_vpc.web_vpc]
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -122,7 +122,7 @@ resource "aws_vpc" "web_vpc" {
   enable_dns_support   = true
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -142,7 +142,7 @@ resource "aws_subnet" "web_subnet" {
 
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -162,7 +162,7 @@ resource "aws_subnet" "web_subnet2" {
 
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -180,7 +180,7 @@ resource "aws_internet_gateway" "web_igw" {
 
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -197,7 +197,7 @@ resource "aws_route_table" "web_rtb" {
 
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -234,7 +234,7 @@ resource "aws_network_interface" "web-eni" {
   private_ips = ["172.16.10.100"]
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -255,7 +255,7 @@ resource "aws_flow_log" "vpcflowlogs" {
 
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -272,7 +272,7 @@ resource "aws_s3_bucket" "flowbucket" {
   force_destroy = true
 
   tags = {
-    git_commit           = "0ed75a154ce537b178c17d1d5c62a43cf38a5a14"
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
