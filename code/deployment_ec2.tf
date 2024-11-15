@@ -53,7 +53,7 @@ resource "aws_ebs_volume" "web_host_storage" {
 resource "aws_ebs_snapshot" "example_snapshot" {
   # ebs snapshot without encryption
   volume_id   = "${aws_ebs_volume.web_host_storage.id}"
-  description = "${local.resource_prefix.value}-ebs-snapshot"
+  description = "${local.resource_prefix.value}-ebs-snapshot-2"
 
   tags = {
     git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
