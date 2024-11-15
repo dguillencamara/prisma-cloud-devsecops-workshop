@@ -1,7 +1,7 @@
 resource "aws_instance" "web_host" {
   # ec2 have plain text secrets in user data
   ami           = "${var.ami}"
-  instance_type = "t2.nano"
+  instance_type = "t3.medium"
 
   vpc_security_group_ids = [
   "${aws_security_group.web-node.id}"]
@@ -22,9 +22,7 @@ EOF
     git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
-    git_last_modified_by = "tprendervill@paloaltonetworks.com"
-    git_modifiers        = "tprendervill"
-    git_org              = "dguillencamara"
+    git_last_modified_by = "tprendervill@paloaltonetworks.com"    
     git_repo             = "prisma-cloud-devsecops-workshop"
     yor_name             = "web_host"
     yor_trace            = "b86c731d-93ed-48ca-a211-3be5e089286d"
