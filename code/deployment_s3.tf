@@ -69,11 +69,11 @@ resource "aws_s3_bucket" "operations" {
   force_destroy = true
 
   tags = {
-    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_commit           = "3226c0a91080f00625559622ee36d2e6174a7462"
     git_file             = "code/deployment_s3.tf"
-    git_last_modified_at = "2024-01-26 23:01:56"
-    git_last_modified_by = "tprendervill@paloaltonetworks.com"
-    git_modifiers        = "tprendervill"
+    git_last_modified_at = "2024-11-18 14:50:44"
+    git_last_modified_by = "80401876+dguillencamara@users.noreply.github.com"
+    git_modifiers        = "80401876+dguillencamara/tprendervill"
     git_org              = "dguillencamara"
     git_repo             = "prisma-cloud-devsecops-workshop"
     yor_name             = "operations"
